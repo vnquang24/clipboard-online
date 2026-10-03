@@ -2,10 +2,38 @@
     "name": "@clipboard-online/ui",
     "version": "1.0.0",
     "description": "",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "files": [
-        "dist"
-    ],
-    "private": true
+    "type": "module",
+    "main": "./index.ts",
+    "types": "./index.ts",
+    "exports": {
+        ".": "./index.ts",
+        "./next": "./providers/next-ui-provider.tsx",
+        "./antd": "./antd.ts",
+        "./icons": "./icons.ts"
+    },
+    "scripts": {
+        "typecheck": "tsc --noEmit"
+    },
+    "private": true,
+    "dependencies": {
+        "@ant-design/cssinjs": "catalog:",
+        "@ant-design/icons": "catalog:",
+        "@ant-design/nextjs-registry": "catalog:",
+        "antd": "catalog:"
+    },
+    "peerDependencies": {
+        "next": "catalog:",
+        "react": "catalog:",
+        "react-dom": "catalog:"
+    },
+    "peerDependenciesMeta": {
+        "next": {
+            "optional": true
+        }
+    },
+    "devDependencies": {
+        "@types/react": "catalog:",
+        "@types/react-dom": "catalog:",
+        "typescript": "catalog:web"
+    }
 }

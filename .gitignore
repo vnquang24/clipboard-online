@@ -1,0 +1,36 @@
+# Dependencies and package-manager caches (all workspace packages)
+node_modules/
+.pnpm-store/
+.pnp.*
+
+# Build outputs and caches
+.next/
+out/
+dist/
+build/
+.turbo/
+.cache/
+*.tsbuildinfo
+next-env.d.ts
+
+# Test artifacts
+coverage/
+playwright-report/
+test-results/
+
+# AWS CDK generated assets
+cdk.out/
+.cdk.staging/
+
+# Local environment and credentials; keep shareable examples
+.env*
+!.env.example
+!.env.*.example
+.aws/
+*.pem
+*.key
+
+# Logs and operating-system files
+*.log
+.DS_Store
+Thumbs.db
